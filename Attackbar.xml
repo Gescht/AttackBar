@@ -22,7 +22,7 @@
   </Frame>
   <Frame name="Abar_Frame" toplevel="true" enableMouse="true" movable = "true" parent="UIParent" hidden="true">
     <Size>
-      <AbsDimension x="206" y="52"/>
+      <AbsDimension x="150" y="52"/>
     </Size>
     <Anchors>
       <Anchor point="TOP">
@@ -31,7 +31,7 @@
         </Offset>
       </Anchor>
     </Anchors>
-    <Backdrop name="Abar_Backdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+    <Backdrop name="Abar_Backdrop" bgFile="" edgeFile="" tile="true">
       <EdgeSize>
         <AbsValue val="16"/>
       </EdgeSize>
@@ -43,9 +43,9 @@
       <Layer level="ARTWORK">
         <FontString name="Abar_Text" inherits="GameFontNormal" text="attackbar anchor">
           <Anchors>
-            <Anchor point="TOP">
+            <Anchor point="CENTER">
               <Offset>
-                <AbsDimension x="0" y="-5"/>
+                <AbsDimension x="0" y="0"/>
               </Offset>
             </Anchor>
           </Anchors>
@@ -76,7 +76,7 @@
 
   <StatusBar name="AbarBar" hidden="true" drawLayer="BORDER" parent="UIParent" virtual="true" toplevel="true">
     <Size>
-      <AbsDimension x="195" y="13"/>
+      <AbsDimension x="139" y="20"/>
     </Size>
     <Anchors>
       <Anchor point="CENTER">
@@ -94,31 +94,31 @@
       <Layer level="ARTWORK">
         <FontString name="$parentText" inherits="GameFontHighlight">
           <Size>
-            <AbsDimension x="185" y="16"/>
+            <AbsDimension x="129" y="16"/>
           </Size>
           <Anchors>
-            <Anchor point="TOP">
+            <Anchor point="CENTER">
               <Offset>
-                <AbsDimension x="0" y="4"/>
+                <AbsDimension x="0" y="0"/>
               </Offset>
             </Anchor>
           </Anchors>
         </FontString>
         <FontString name="$parentTmr" inherits="GameFontHighlight">
           <Size>
-            <AbsDimension x="185" y="16"/>
+            <AbsDimension x="30" y="16"/>
           </Size>
           <Anchors>
-            <Anchor point="TOP">
+            <Anchor point="RIGHT">
               <Offset>
-                <AbsDimension x="80" y="4"/>
+                <AbsDimension x="-10" y="0"/>
               </Offset>
             </Anchor>
           </Anchors>
         </FontString>
         <Texture name="$parentBorder" file="Interface\CastingBar\UI-CastingBar-Border">
           <Size>
-            <AbsDimension x="256" y="64"/>
+            <AbsDimension x="200" y="64"/>
           </Size>
           <Anchors>
             <Anchor point="TOP">
@@ -130,7 +130,7 @@
         </Texture>
         <Texture name="$parentBordern" file="Interface\Tooltips\UI-StatusBar-Border" hidden = "true">
           <Size>
-            <AbsDimension x="205" y="20"></AbsDimension>
+            <AbsDimension x="151" y="20"></AbsDimension>
           </Size>
           <Anchors>
             <Anchor point="CENTER">
@@ -141,7 +141,7 @@
           </Anchors>
         </Texture>
       </Layer>
-      <Layer level="OVERLAY">
+      <!--<Layer level="OVERLAY">
         <Texture name="$parentSpark" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
           <Size>
             <AbsDimension x="32" y="32"/>
@@ -150,21 +150,22 @@
             <Anchor point="CENTER"/>
           </Anchors>
         </Texture>
-      </Layer>
+      </Layer>-->
     </Layers>
     <Scripts>
       <OnUpdate>
         Abar_Update()
       </OnUpdate>
     </Scripts>
-    <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
-    <BarColor r="0" g="0" b="1.0"/>
+    <!--<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>-->
+    <BarTexture file="Interface\AddOns\AttackBar\bar_tukui.tga"/>
+    <BarColor r="1" g="1" b="1" a="0.8"/>
   </StatusBar>
   <StatusBar name="Abar_Mhr" inherits="AbarBar" parent="UIParent"/>
   <StatusBar name="Abar_Oh" inherits="AbarBar" parent="UIParent"/>
   <Frame name="ebar_Frame" toplevel="true" enableMouse="true" movable = "true" parent="UIParent" hidden="true">
     <Size>
-      <AbsDimension x="206" y="52"/>
+      <AbsDimension x="150" y="52"/>
     </Size>
     <Anchors>
       <Anchor point="TOP">
@@ -173,7 +174,7 @@
         </Offset>
       </Anchor>
     </Anchors>
-    <Backdrop name="ebar_Backdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+    <Backdrop name="ebar_Backdrop" bgFile="" edgeFile="" tile="true">
       <EdgeSize>
         <AbsValue val="16"/>
       </EdgeSize>
@@ -185,9 +186,9 @@
       <Layer level="ARTWORK">
         <FontString name="Abar_Text" inherits="GameFontNormal" text="enemybar anchor">
           <Anchors>
-            <Anchor point="TOP">
+            <Anchor point="CENTER">
               <Offset>
-                <AbsDimension x="0" y="-5"/>
+                <AbsDimension x="0" y="0"/>
               </Offset>
             </Anchor>
           </Anchors>
