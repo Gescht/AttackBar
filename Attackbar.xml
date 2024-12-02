@@ -22,21 +22,18 @@
   </Frame>
   <Frame name="Abar_Frame" toplevel="true" enableMouse="true" movable = "true" parent="UIParent" hidden="true">
     <Size>
-      <AbsDimension x="150" y="52"/>
+      <AbsDimension x="139" y="20"/>
     </Size>
     <Anchors>
-      <Anchor point="TOP">
+      <Anchor point="CENTER">
         <Offset>
-          <AbsDimension x="0" y="-125"/>
+          <AbsDimension x="0" y="0"/>
         </Offset>
       </Anchor>
     </Anchors>
-    <Backdrop name="Abar_Backdrop" bgFile="" edgeFile="" tile="true">
-      <EdgeSize>
-        <AbsValue val="16"/>
-      </EdgeSize>
+    <Backdrop name="Abar_Backdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="" tile="true">
       <BackgroundInsets>
-        <AbsInset left="5" right="5" top="5" bottom="5"/>
+        <AbsInset left="6" right="-6" top="3" bottom="-3"/>
       </BackgroundInsets>
     </Backdrop>
     <Layers>
@@ -165,21 +162,18 @@
   <StatusBar name="Abar_Oh" inherits="AbarBar" parent="UIParent"/>
   <Frame name="ebar_Frame" toplevel="true" enableMouse="true" movable = "true" parent="UIParent" hidden="true">
     <Size>
-      <AbsDimension x="150" y="52"/>
+      <AbsDimension x="139" y="20"/>
     </Size>
     <Anchors>
-      <Anchor point="TOP">
+      <Anchor point="CENTER">
         <Offset>
-          <AbsDimension x="0" y="-125"/>
+          <AbsDimension x="0" y="0"/>
         </Offset>
       </Anchor>
     </Anchors>
-    <Backdrop name="ebar_Backdrop" bgFile="" edgeFile="" tile="true">
-      <EdgeSize>
-        <AbsValue val="16"/>
-      </EdgeSize>
+    <Backdrop name="ebar_Backdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="" tile="true">
       <BackgroundInsets>
-        <AbsInset left="5" right="5" top="5" bottom="5"/>
+        <AbsInset left="6" right="-6" top="3" bottom="-3"/>
       </BackgroundInsets>
     </Backdrop>
     <Layers>
