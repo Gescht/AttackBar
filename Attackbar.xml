@@ -71,6 +71,93 @@
 
   </Frame>
 
+  <StatusBar name="AbarBar" hidden="true" drawLayer="BORDER" parent="UIParent" virtual="true" toplevel="true">
+    <Size>
+      <AbsDimension x="139" y="20"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture setAllPoints="true">
+          <Color r="0" g="0" b="0" a=".5"/>
+        </Texture>
+      </Layer>
+      <Layer level="ARTWORK">
+        <FontString name="$parentText" inherits="GameFontHighlight">
+          <Size>
+            <AbsDimension x="129" y="16"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentTmr" inherits="GameFontHighlight">
+          <Size>
+            <AbsDimension x="30" y="16"/>
+          </Size>
+          <Anchors>
+            <Anchor point="RIGHT">
+              <Offset>
+                <AbsDimension x="-10" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <Texture name="$parentBorder" file="Interface\CastingBar\UI-CastingBar-Border">
+          <Size>
+            <AbsDimension x="200" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="28"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+        <Texture name="$parentBordern" file="Interface\Tooltips\UI-StatusBar-Border" hidden = "true">
+          <Size>
+            <AbsDimension x="151" y="20"></AbsDimension>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"></AbsDimension>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <!--<Layer level="OVERLAY">
+        <Texture name="$parentSpark" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
+          <Size>
+            <AbsDimension x="32" y="32"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER"/>
+          </Anchors>
+        </Texture>
+      </Layer>-->
+    </Layers>
+    <Scripts>
+      <OnUpdate>
+        Abar_Update()
+      </OnUpdate>
+    </Scripts>
+    <!--<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>-->
+    <BarTexture file="Interface\AddOns\AttackBar\bar_tukui.tga"/>
+    <BarColor r="1" g="1" b="1" a="0.8"/>
+  </StatusBar>
   <StatusBar name="Abar_Mhr" inherits="AbarBar" parent="UIParent"/>
   <StatusBar name="Abar_Oh" inherits="AbarBar" parent="UIParent"/>
   <Frame name="ebar_Frame" toplevel="true" enableMouse="true" movable = "true" parent="UIParent" hidden="true">
