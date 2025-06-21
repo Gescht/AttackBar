@@ -49,45 +49,11 @@ function Abar_loaded()
   if AttackBarDB.pvp == nil then
     AttackBarDB.pvp = true
   end
-  if AttackBarDB.text == nil then
-    AttackBarDB.pvp = "standard"
-  end
   Abar_Mhr:SetPoint("LEFT", Abar_Frame, "TOPLEFT", 6, -13)
   Abar_Oh:SetPoint("LEFT", Abar_Frame, "TOPLEFT", 6, -35)
   Abar_MhrText:SetJustifyH("Left")
   Abar_OhText:SetJustifyH("Left")
   ebar_VL()
-  local Border = "Border"
-  local Bordern = "Bordern"
-  if AttackBarDB.text == "thin" then
-    getglobal(Abar_Mhr:GetName() .. Border):Hide()
-    getglobal(Abar_Oh:GetName() .. Border):Hide()
-    getglobal(ebar_mh:GetName() .. Border):Hide()
-    getglobal(ebar_oh:GetName() .. Border):Hide()
-    getglobal(Abar_Mhr:GetName() .. Bordern):Show()
-    getglobal(Abar_Oh:GetName() .. Bordern):Show()
-    getglobal(ebar_mh:GetName() .. Bordern):Show()
-    getglobal(ebar_oh:GetName() .. Bordern):Show()
-  elseif AttackBarDB.text == "none" then
-    getglobal(Abar_Mhr:GetName() .. Bordern):Hide()
-    getglobal(Abar_Oh:GetName() .. Bordern):Hide()
-    getglobal(ebar_mh:GetName() .. Bordern):Hide()
-    getglobal(ebar_oh:GetName() .. Bordern):Hide()
-    getglobal(Abar_Mhr:GetName() .. Border):Hide()
-    getglobal(Abar_Oh:GetName() .. Border):Hide()
-    getglobal(ebar_mh:GetName() .. Border):Hide()
-    getglobal(ebar_oh:GetName() .. Border):Hide()
-  else
-    AttackBarDB.text = "standard"
-    getglobal(Abar_Mhr:GetName() .. Bordern):Hide()
-    getglobal(Abar_Oh:GetName() .. Bordern):Hide()
-    getglobal(ebar_mh:GetName() .. Bordern):Hide()
-    getglobal(ebar_oh:GetName() .. Bordern):Hide()
-    getglobal(Abar_Mhr:GetName() .. Border):Show()
-    getglobal(Abar_Oh:GetName() .. Border):Show()
-    getglobal(ebar_mh:GetName() .. Border):Show()
-    getglobal(ebar_oh:GetName() .. Border):Show()
-  end
 end
 function Abar_chat(msg)
   msg = strlower(msg)
@@ -111,43 +77,6 @@ function Abar_chat(msg)
   elseif msg == "pvp" then
     AttackBarDB.pvp = not(AttackBarDB.pvp)
     DEFAULT_CHAT_FRAME:AddMessage('pvp is' .. Abar_Boo(AttackBarDB.pvp));
-  elseif msg == "text" then
-    local Border = "Border"
-    local Bordern = "Bordern"
-    if AttackBarDB.text == "standard" then
-      AttackBarDB.text = "thin"
-      getglobal(Abar_Mhr:GetName() .. Border):Hide()
-      getglobal(Abar_Oh:GetName() .. Border):Hide()
-      getglobal(ebar_mh:GetName() .. Border):Hide()
-      getglobal(ebar_oh:GetName() .. Border):Hide()
-      getglobal(Abar_Mhr:GetName() .. Bordern):Show()
-      getglobal(Abar_Oh:GetName() .. Bordern):Show()
-      getglobal(ebar_mh:GetName() .. Bordern):Show()
-      getglobal(ebar_oh:GetName() .. Bordern):Show()
-    elseif AttackBarDB.text == "thin" then
-      AttackBarDB.text = "none"
-      getglobal(Abar_Mhr:GetName() .. Bordern):Hide()
-      getglobal(Abar_Oh:GetName() .. Bordern):Hide()
-      getglobal(ebar_mh:GetName() .. Bordern):Hide()
-      getglobal(ebar_oh:GetName() .. Bordern):Hide()
-      getglobal(Abar_Mhr:GetName() .. Border):Hide()
-      getglobal(Abar_Oh:GetName() .. Border):Hide()
-      getglobal(ebar_mh:GetName() .. Border):Hide()
-      getglobal(ebar_oh:GetName() .. Border):Hide()
-    else
-      AttackBarDB.text = "standard"
-      getglobal(Abar_Mhr:GetName() .. Bordern):Hide()
-      getglobal(Abar_Oh:GetName() .. Bordern):Hide()
-      getglobal(ebar_mh:GetName() .. Bordern):Hide()
-      getglobal(ebar_oh:GetName() .. Bordern):Hide()
-      getglobal(Abar_Mhr:GetName() .. Border):Show()
-      getglobal(Abar_Oh:GetName() .. Border):Show()
-      getglobal(ebar_mh:GetName() .. Border):Show()
-      getglobal(ebar_oh:GetName() .. Border):Show()
-    end
-    DEFAULT_CHAT_FRAME:AddMessage("Attack bar textures are " .. AttackBarDB.text)
-
-
   elseif msg == "mob" then
     AttackBarDB.mob = not(AttackBarDB.mob)
     DEFAULT_CHAT_FRAME:AddMessage('mobs are' .. Abar_Boo(AttackBarDB.mob));
@@ -160,7 +89,6 @@ function Abar_chat(msg)
     DEFAULT_CHAT_FRAME:AddMessage('range- to turn on and off the ranged bar');
     DEFAULT_CHAT_FRAME:AddMessage('pvp- to turn on and off the enemy player bar(s)');
     DEFAULT_CHAT_FRAME:AddMessage('mob- to turn on and off the enemy mob bar(s)');
-    DEFAULT_CHAT_FRAME:AddMessage('text- toggle from standard to line to no texture');
   end
 end
 function Abar_selfhit(arg1)
